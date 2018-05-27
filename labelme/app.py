@@ -704,7 +704,7 @@ class MainWindow(QtWidgets.QMainWindow, WindowMixin):
             imageData = self.imageData if self._config['store_data'] else None
             lf.save(filename, shapes, imagePath, imageData,
                     self.lineColor.getRgb(), self.fillColor.getRgb(),
-                    self.otherData)
+                    self.otherData, imageDataShape=self.imageData.size)
             self.labelFile = lf
             # disable allows next and previous image to proceed
             # self.filename = filename

@@ -61,7 +61,7 @@ class LabelFile(object):
         self.otherData = otherData
 
     def save(self, filename, shapes, imagePath, imageData=None,
-             lineColor=None, fillColor=None, otherData=None):
+             lineColor=None, fillColor=None, otherData=None, imageDataShape=None):
         if imageData is not None:
             imageData = base64.b64encode(imageData).decode('utf-8')
         if otherData is None:
