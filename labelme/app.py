@@ -702,9 +702,11 @@ class MainWindow(QtWidgets.QMainWindow, WindowMixin):
             imagePath = os.path.relpath(
                 self.imagePath, os.path.dirname(filename))
             imageData = self.imageData if self._config['store_data'] else None
+            rows = self.image.height()
+            cols = self.image.width()
             lf.save(filename, shapes, imagePath, imageData,
                     self.lineColor.getRgb(), self.fillColor.getRgb(),
-                    self.otherData, imageDataShape=self.imageData.size)
+                    self.otherData, imageDataShape=(rows, cols))
             self.labelFile = lf
             # disable allows next and previous image to proceed
             # self.filename = filename

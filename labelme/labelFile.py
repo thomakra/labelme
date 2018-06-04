@@ -72,6 +72,7 @@ class LabelFile(object):
             fillColor=fillColor,
             imagePath=imagePath,
             imageData=imageData,
+            imageDataShape=imageDataShape,
         )
         for key, value in otherData.items():
             data[key] = value
