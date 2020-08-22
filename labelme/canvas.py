@@ -134,14 +134,14 @@ class Canvas(QtWidgets.QWidget):
                     # Don't allow the user to draw outside the pixmap.
                     # Project the point to the pixmap's edges.
                     pos = self.intersectionPoint(self.current[-1], pos)
-                elif len(self.current) > 1 and \
-                        self.closeEnough(pos, self.current[0]):
-                    # Attract line to starting point and
-                    # colorise to alert the user.
-                    pos = self.current[0]
-                    color = self.current.line_color
-                    self.overrideCursor(CURSOR_POINT)
-                    self.current.highlightVertex(0, Shape.NEAR_VERTEX)
+                #elif len(self.current) > 1 and \
+                #        self.closeEnough(pos, self.current[0]):
+                #    # Attract line to starting point and
+                #    # colorise to alert the user.
+                #    pos = self.current[0]
+                #    color = self.current.line_color
+                #    self.overrideCursor(CURSOR_POINT)
+                #    self.current.highlightVertex(0, Shape.NEAR_VERTEX)
                 self.line[0] = self.current[-1]
                 self.line[1] = pos
                 self.line.line_color = color
